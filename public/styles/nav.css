@@ -1,0 +1,23 @@
+nav {
+  padding: 0 1.5em;
+  height: 120px;
+  width: 100%; /* Can I give it as 100vw */
+  background-color: #4056a1;
+  color: #ffffff;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.nav-left {
+  font-family: Bungee, sans-serif;
+}
+.nav-right {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+}
+.fa-angles-down {
+  color: #ff0000;
+}
