@@ -1,5 +1,5 @@
 $(document).ready(function() {
-  const $textarea = $(".new-tweet-textarea");
+  const $textarea = $(".new-tweet-text");
   $textarea.on("input", function(e) {
     e.preventDefault;
     const $tweetLength = $(this).val().length;
