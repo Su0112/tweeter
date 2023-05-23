@@ -28,16 +28,10 @@
     />
 
     <!-- App CSS -->
-    <link rel="stylesheet" href="/styles/layout.css" type="text/css" />
-    <link rel="stylesheet" href="/styles/nav.css" type="text/css" />
-    <link rel="stylesheet" href="/styles/header.css" type="text/css" />
-    <link rel="stylesheet" href="/styles/new-tweet.css" type="text/css" />
-
-    <!-- External JS -->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-
-    <!-- App JS -->
-    <script type="text/javascript" src="/scripts/client.js"></script>
+    <link rel="stylesheet" href="./styles/layout.css" type="text/css" />
+    <link rel="stylesheet" href="./styles/nav.css" type="text/css" />
+    <link rel="stylesheet" href="./styles/header.css" type="text/css" />
+    <link rel="stylesheet" href="./styles/new-tweet.css" type="text/css" />
   </head>
 
   <body>
@@ -51,7 +45,7 @@
     </nav>
     <header>
       <div>
-        <img src="/images/profile-hex.png" />
+        <img src="./images/profile-hex.png" />
       </div>
       <br />
       <div>
@@ -64,18 +58,29 @@
       <section class="new-tweet">
         <h2>Compose Tweet</h2>
         <form action="/tweets" method="POST">
+          <label class="new-tweet-text-label" for="tweet-text"
+            >What are you humming about?</label
+          >
           <textarea
             class="new-tweet-text"
-            placeholder="What are you humming about?"
             name="text"
             id="tweet-text"
           ></textarea>
           <div class="new-tweet-button-container">
             <button class="new-tweet-button" type="submit">Tweet</button>
-            <output name="counter" class="counter" for="tweet-text">140</output>
+            <output name="counter" class="counter" for="tweet-text"
+              >140???</output
+            >
           </div>
         </form>
       </section>
     </main>
   </body>
+  <!-- External JS -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+
+  <!-- App JS -->
+  <script type="text/javascript" src="./scripts/client.js"></script>
+  <!-- To composer-char-counter.js -->
+  <script src="./scripts/composer-char-counter.js"></script>
 </html>

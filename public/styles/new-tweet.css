@@ -9,10 +9,12 @@ form {
 .new-tweet-text {
   border: none;
   background: none;
-  font-weight: 600;
-  line-height: 0.5;
   border-bottom: 0.4rem solid #545150;
   resize: none;
+}
+
+.new-tweet-text-label {
+  font-weight: 600;
 }
 
 .new-tweet-button-container {
@@ -26,4 +28,8 @@ form {
   border: none;
   background-color: #4956a1;
   color: #f4f1ec;
+}
+
+.invalid {
+  color: red;
 }
