@@ -43,6 +43,6 @@ p {
   padding-left: 0.5rem;
   color: #4056a1;
 }
-.tweet-footer-icons:hover {
-  color: red;
+.fas:hover {
+  color: #ca9821;
 }
