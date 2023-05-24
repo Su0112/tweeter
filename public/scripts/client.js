@@ -69,7 +69,7 @@ const data = [
 
 const renderTweets = function(tweets) {
   // loops through tweets
-  for (const tweet of twets) {
+  for (const tweet of tweets) {
     // calls createTweetElement for each tweet
     const $tweetElement = createTweetElement(tweet);
     // takes return value and appends it to the tweets container
@@ -91,7 +91,7 @@ const createTweetElement = function(tweet) {
   const $content = $('<div>').addClass('content').text(tweet.content.text);
 
   const $footer = $('<footer>');
-  const $timestamp = $('<span>').addClass('timestamp').text(formatTimestamp(tweet.created_at));
+  const $timestamp = $('<span>').addClass('timestamp').text(tweet.created_at);
   const $icons = $('<span>').addClass('icons').html('<i class="fas fa-flag"></i><i class="fas fa-retweet"></i><i class="fas fa-heart"></i>');
   $footer.append($timestamp, $icons);
 
