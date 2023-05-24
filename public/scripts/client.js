@@ -105,6 +105,8 @@ $(document).ready(function() {
   });
 });
 
+
+
 const renderTweets = function(tweets) {
   // loops through tweets
   for (const tweet of tweets) {
@@ -129,7 +131,7 @@ const createTweetElement = function(tweet) {
   const $content = $('<div>').addClass('content').text(tweet.content.text);
 
   const $footer = $('<footer>');
-  const $timestamp = $('<span>').addClass('timestamp').text(tweet.created_at);
+  const $timestamp = $('<span>').addClass('timestamp').text(tweet.created_at).text(timeago.format(tweet.created_at, "en_US"));
   const $icons = $('<span>').addClass('icons').html('<i class="fas fa-flag"></i><i class="fas fa-retweet"></i><i class="fas fa-heart"></i>');
   $footer.append($timestamp, $icons);
 
@@ -137,5 +139,3 @@ const createTweetElement = function(tweet) {
 
   return $tweet;
 };
-
-//renderTweets(data);
