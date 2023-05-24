@@ -25,6 +25,17 @@ $(document).ready(function() {
     // Serialize the form data into a query string
     const formData = $form.serialize();
 
+    // Perform form validation
+    const tweetContent = $form.find("textarea[name='text']").val().trim();
+    if (tweetContent === "") {
+      alert("Tweet is empty! Please enter a tweet!");
+      return;
+    }
+    if (tweetContent.length > 140) {
+      alert("Tweet content is too long!");
+      return;
+    }
+
     // Make a POST request to the server using Ajax
     $.ajax({
       url: "http://localhost:8080/tweets",
@@ -41,6 +52,8 @@ $(document).ready(function() {
 
 
 const renderTweets = function(tweets) {
+  // Clear previous tweets
+  $('#tweets-container').empty();
   // loops through tweets
   for (const tweet of tweets) {
     // calls createTweetElement for each tweet
