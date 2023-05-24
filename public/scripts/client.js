@@ -46,6 +46,7 @@ $(document).ready(function() {
     });
     console.log(event);
     $form[0].reset();
+    $(".counter").val(140);
   });
 });
 
