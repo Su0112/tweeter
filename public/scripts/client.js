@@ -66,6 +66,24 @@ const data = [
     "created_at": 1461113959088
   }
 ];
+$(document).ready(function() {
+  const $form = $("form");
+  // Add the event listener for form submission
+  $form.submit((event) => {
+    // Prevent the default form submission behavior
+    event.preventDefault();
+    // Serialize the form data into a query string
+    const formData = $form.serialize();
+    // Make a POST request to the server using Ajax
+    $.ajax({
+      url: "http://localhost:8080/tweets",
+      method: "POST",
+      data: formData,
+    });
+    console.log(event);
+    $form[0].reset();
+  });
+});
 
 const renderTweets = function(tweets) {
   // loops through tweets
