@@ -29,7 +29,18 @@ form {
   background-color: #4956a1;
   color: #f4f1ec;
 }
-
 .invalid {
   color: red;
+}
+
+.invalid-icon {
+  display: none;
+  border: 0.3rem solid red;
+  padding: 1rem;
+  color: red;
+}
+
+#icon {
+  padding: 0.5rem;
+  line-height: 1rem;
 }

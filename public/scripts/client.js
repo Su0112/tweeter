@@ -1,6 +1,6 @@
-
 $(document).ready(function() {
   const $form = $("form");
+  const $error = $("#error");
 
   const loadTweets = function() {
     // Make a GET request to the server using Ajax
@@ -22,17 +22,20 @@ $(document).ready(function() {
     // Prevent the default form submission behavior
     event.preventDefault();
 
+    // Hide the error element
+    $error.hide();
+
     // Serialize the form data into a query string
     const formData = $form.serialize();
 
     // Perform form validation
     const tweetContent = $form.find("textarea[name='text']").val().trim();
     if (tweetContent === "") {
-      alert("Tweet is empty! Please enter a tweet!");
+      showError("Tweet is empty! Please enter a tweet!");
       return;
     }
     if (tweetContent.length > 140) {
-      alert("Tweet content is too long!");
+      showError("Tweet content is too long! Please respect our arbitrary limit of 140 chars!");
       return;
     }
 
@@ -47,9 +50,15 @@ $(document).ready(function() {
     console.log(event);
     $form[0].reset();
     $(".counter").val(140);
+    $(".invalid").slideUp();
   });
-});
 
+  // Function to show the error message
+  const showError = function(message) {
+    $error.find("#message").text(message);
+    $error.slideDown();
+  };
+});
 
 
 const renderTweets = function(tweets) {
@@ -61,17 +70,8 @@ const renderTweets = function(tweets) {
     const $tweetElement = createTweetElement(tweet);
     // takes return value and appends it to the tweets container
     $('#tweets-container').prepend($tweetElement);
-
-  }
+  };
 };
-//"Escaping text" means re-encoding text so that unsafe characters are converted into a safe "encoded" representation
-// const escape = function(str) {
-//   let div = document.createElement("div");
-//   div.appendChild(document.createTextNode(str));
-//   return div.innerHTML;
-// };
-
-// const safeHTML = `<p>${escape(textFromUser)}</p>`;
 
 //creating the tweet elements
 const createTweetElement = function(tweet) {
