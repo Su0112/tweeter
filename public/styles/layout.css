@@ -1,11 +1,9 @@
-/*
- * http://www.paulirish.com/2012/box-sizing-border-box-ftw/
- * https://css-tricks.com/international-box-sizing-awareness-day/
- * Do not modify these two selectors, please
- */
+/* media query for tablet */
+/* media query for desktop */
 html {
   box-sizing: border-box;
 }
+
 *,
 *:before,
 *:after {
@@ -15,15 +13,33 @@ html {
 /*
  * Global layout stuff
  */
-
 body {
   color: #545149;
   background-color: #f4f1ec;
   font-size: 24px;
   font-family: "Source Sans Pro", sans-serif;
 }
+
 main {
   width: 90%;
   margin: 0 auto;
   background-color: #f4f1ec;
+  padding-top: 2rem;
+}
+@media only screen and (min-width: 768px) {
+  main {
+    padding-top: 0;
+  }
+}
+
+#profile {
+  display: block;
+}
+@media only screen and (min-width: 768px) {
+  #profile {
+    display: flex;
+    justify-content: center;
+    padding: 5rem 2rem 0;
+    gap: 6rem;
+  }
 }

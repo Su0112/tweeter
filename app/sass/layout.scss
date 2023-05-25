@@ -1,8 +1,5 @@
-/*
- * http://www.paulirish.com/2012/box-sizing-border-box-ftw/
- * https://css-tricks.com/international-box-sizing-awareness-day/
- * Do not modify these two selectors, please
- */
+@use "breakpoints" as breakpoints;
+
 html {
   box-sizing: border-box;
 }
@@ -26,4 +23,19 @@ main {
   width: 90%;
   margin: 0 auto;
   background-color: #f4f1ec;
+  padding-top: 2rem;
+  @include breakpoints.medium {
+    padding-top: 0;
+  }
+}
+
+#profile {
+  display: block;
+
+  @include breakpoints.medium {
+    display: flex;
+    justify-content: center;
+    padding: 5rem 2rem 0;
+    gap: 6rem;
+  }
 }

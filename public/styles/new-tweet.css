@@ -2,6 +2,7 @@ form {
   display: flex;
   flex-direction: column;
 }
+
 .counter {
   font-family: inherit;
 }
@@ -29,6 +30,7 @@ form {
   background-color: #4956a1;
   color: #f4f1ec;
 }
+
 .invalid {
   color: red;
 }
@@ -43,4 +45,8 @@ form {
 #icon {
   padding: 0.5rem;
   line-height: 1rem;
+}
+
+.fa-triangle-exclamation {
+  color: #ff0000;
 }

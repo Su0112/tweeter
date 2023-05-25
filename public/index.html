@@ -1,6 +1,10 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1,  maximum-scale=1.0"
+    />
     <!-- Meta Information -->
     <title>Tweeter - Home Page</title>
 
@@ -58,7 +62,7 @@
       </div>
     </nav>
     <header>
-      <div>
+      <div id="profile">
         <img src="./images/profile-hex.png" />
       </div>
       <br />
@@ -71,17 +75,9 @@
     <main class="container">
       <section class="new-tweet">
         <div class="invalid-icon" id="error">
-          <i
-            id="icon"
-            class="fa-solid fa-triangle-exclamation"
-            style="color: #ff0000"
-          ></i>
+          <i id="icon" class="fa-solid fa-triangle-exclamation"></i>
           <span id="message"></span>
-          <i
-            id="icon"
-            class="fa-solid fa-triangle-exclamation"
-            style="color: #ff0000"
-          ></i>
+          <i id="icon" class="fa-solid fa-triangle-exclamation"></i>
         </div>
         <form action="/tweets" method="POST">
           <label class="new-tweet-text-label" for="tweet-text"
