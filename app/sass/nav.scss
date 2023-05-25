@@ -10,14 +10,16 @@ nav {
   position: fixed;
 }
 
-.nav-left {
-  font-family: Bungee, sans-serif;
-}
-.nav-right {
-  display: flex;
-  justify-content: center;
-  flex-direction: column;
-  align-items: center;
+.nav {
+  &-left {
+    font-family: Bungee, sans-serif;
+  }
+  &-right {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+  }
 }
 .fa-angles-down {
   color: #ff0000;

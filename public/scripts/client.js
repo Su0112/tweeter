@@ -77,7 +77,8 @@ const renderTweets = function(tweets) {
 const createTweetElement = function(tweet) {
   const $tweet = $('<article>').addClass('tweet');
 
-  const $header = $('<header>');
+  const $header = $("<div>").addClass("article-header");
+  const $avaterContainer = $("<div>");
   const $avatar = $('<img>').addClass('avatar').attr('src', tweet.user.avatars);
   const $name = $('<span>').addClass('name').text(tweet.user.name);
   const $handle = $('<span>').addClass('handle').text(tweet.user.handle);
@@ -88,6 +89,8 @@ const createTweetElement = function(tweet) {
   const $footer = $('<footer>');
   const $timestamp = $('<span>').addClass('timestamp').text(tweet.created_at).text(timeago.format(tweet.created_at, "en_US"));
   const $icons = $('<span>').addClass('icons').html('<i class="fas fa-flag"></i><i class="fas fa-retweet"></i><i class="fas fa-heart"></i>');
+  $avaterContainer.append($avatar, $name);
+  $header.append($avaterContainer, $handle);
   $footer.append($timestamp, $icons);
 
   $tweet.append($header, $content, $footer);

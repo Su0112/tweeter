@@ -14,12 +14,13 @@ html {
  */
 
 body {
-  color: #545149;
+  color: #545150;
   background-color: #f4f1ec;
   font-size: 24px;
   font-family: "Source Sans Pro", sans-serif;
 }
 main {
+  display: block;
   width: 90%;
   margin: 0 auto;
   background-color: #f4f1ec;
@@ -29,13 +30,13 @@ main {
   }
 }
 
-#profile {
+.hero-container {
   display: block;
 
   @include breakpoints.medium {
     display: flex;
     justify-content: center;
-    padding: 5rem 2rem 0;
-    gap: 6rem;
+    padding: 4rem 2rem 0;
+    gap: 3rem;
   }
 }

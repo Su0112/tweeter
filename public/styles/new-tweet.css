@@ -10,7 +10,7 @@ form {
 .new-tweet-text {
   border: none;
   background: none;
-  border-bottom: 0.4rem solid #545150;
+  border-bottom: 0.2rem solid #545150;
   resize: none;
 }
 
