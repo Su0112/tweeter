@@ -35,8 +35,8 @@ main {
 
   @include breakpoints.medium {
     display: flex;
-    justify-content: center;
-    padding: 4rem 2rem 0;
+    align-items: flex-start;
+    padding: 9rem 2rem;
     gap: 3rem;
   }
 }

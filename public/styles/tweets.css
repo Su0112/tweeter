@@ -9,6 +9,17 @@ article:hover {
   box-shadow: 5px 5px rgb(185, 190, 221);
 }
 
+.profile-name {
+  color: #f4f1ec;
+  padding: none;
+  margin: none;
+}
+
+.profile-img {
+  width: 50%;
+  margin-left: 75px;
+}
+
 .article-header span {
   font-weight: 600;
 }

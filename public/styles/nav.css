@@ -1,10 +1,5 @@
 /* media query for tablet */
 /* media query for desktop */
-@media only screen and (min-width: 768px) {
-  nav {
-    background-color: #4056a1;
-  }
-}
 nav {
   padding: 0 1.5em;
   height: 120px;
@@ -28,4 +23,10 @@ nav {
 
 .fa-angles-down {
   color: #ff0000;
+}
+
+@media only screen and (min-width: 768px) {
+  nav {
+    background-color: #4056a1;
+  }
 }
