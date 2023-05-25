@@ -64,6 +64,14 @@ const renderTweets = function(tweets) {
 
   }
 };
+//"Escaping text" means re-encoding text so that unsafe characters are converted into a safe "encoded" representation
+// const escape = function(str) {
+//   let div = document.createElement("div");
+//   div.appendChild(document.createTextNode(str));
+//   return div.innerHTML;
+// };
+
+// const safeHTML = `<p>${escape(textFromUser)}</p>`;
 
 //creating the tweet elements
 const createTweetElement = function(tweet) {
