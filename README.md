@@ -20,4 +20,4 @@ This repository is the starter code for the project: Students will fork and clon
 
 ## Final Product
 
-![Alt Text](/public/images/tweeter.gif.mp4)
+![Tweeter](/public/images/tweeter.gif)
